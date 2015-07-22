@@ -1,0 +1,13 @@
+<h1>Your code with <%= @snippet.language %> highlighting</h1>
+<p>
+<% if @snippet.highlighted.present? %>
+
+  <%= @snippet.highlighted %>
+<!-- else -->
+	<pre>< @snippet.code ></pre>
+
+</p>
+<% end %>
+<p>
+  <%= link_to "New Snippet", snippets_new_path %>
+</p>	

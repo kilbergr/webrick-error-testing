@@ -1,0 +1,8 @@
+<h1>Make a Snippet</h1>
+<%= form_for @snippet do |f| %>
+		<%= f.label "language" %>
+		<%= f.select :language, options_for_select([['Ruby', 'ruby'], ['JavaScript', 'javascript'], ['CSS', 'css'], ['Java', 'java'], ['HTML', 'html']]) %><br/>
+    <%= f.label "code" %>
+    <%= f.text_area :code, :cols => 20, :rows => 8%><br />
+    <%= f.submit "See Snippet"%>
+<% end %>
